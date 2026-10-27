@@ -1,0 +1,4 @@
+baseURL: https://malloc0x3cc.github.io/
+theme: "PaperMod"
+locale: en-us
+title: My New Hugo Project
