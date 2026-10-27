@@ -1,4 +1,55 @@
 baseURL: https://malloc0x3cc.github.io/
-theme: "PaperMod"
 locale: en-us
-title: My New Hugo Project
+languageCode: en-us
+theme: "PaperMod"
+title: "Malloc0x3cc"
+
+markup:
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: "nordic"
+
+params:
+  env: production
+  title: "Malloc0x3cc"
+  description: "Low-level programming (C, ASM), computer science & studies"
+  author: "Malloc0x3cc"
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+
+  # Home page
+  profileMode:
+    enabled: true
+    subtitle: "Low-level programming (C, ASM), computer science & studies"
+    # buttons:
+    #   - name: "Projects"
+    #     url: "/categories/personal-projects/"
+    #   - name: "Academics"
+    #     url: "/categories/academics/"
+    #   - name: "About"
+    #     url: "/about/"
+
+  socialIcons:
+    - name: "github"
+      url: "https://github.com/malloc0x3cc"
+    - name: "linkedin"
+      url: "https://linkedin.com/in/malloc0x3cc"
+ 
+menu:
+  main:
+    - name: "Projects"
+      url: "/categories/personal-projects/"
+      weight: 10
+    - name: "Academics"
+      url: "/categories/academics/"
+      weight: 20
+    - name: "Misc"
+      url: "/categories/misc/"
+      weight: 30
+    - name: "About"
+      url: "/about/"
+      weight: 40
