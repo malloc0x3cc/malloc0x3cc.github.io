@@ -1,7 +1,7 @@
 ---
 title: "First Post: Setting up the blog"
 date: 2026-10-27
-draft: false
+draft: true
 tags: ["meta", "hugo"]
 categories: ["personal-projects"]
 ---
