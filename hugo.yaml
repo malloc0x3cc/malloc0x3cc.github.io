@@ -41,15 +41,18 @@ params:
  
 menu:
   main:
-    - name: "Projects"
-      url: "/categories/personal-projects/"
+    - name: "All posts"
+      url: "/posts/"
       weight: 10
-    - name: "Academics"
-      url: "/categories/academics/"
-      weight: 20
-    - name: "Misc"
-      url: "/categories/misc/"
-      weight: 30
+    # - name: "Projects"
+    #   url: "/categories/personal-projects/"
+    #   weight: 20
+    # - name: "Academics"
+    #   url: "/categories/academics/"
+    #   weight: 30
+    # - name: "Misc"
+    #   url: "/categories/misc/"
+    #   weight: 40
     - name: "About"
       url: "/about/"
-      weight: 40
+      weight: 50
