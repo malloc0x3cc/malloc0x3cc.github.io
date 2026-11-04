@@ -6,31 +6,31 @@ tags: ["server", "sysadmin"]
 categories: ["personal-projects"]
 ---
 ### *The trees... The trees are speaking fed...*
-![Hackerman](https://media1.tenor.com/m/TbTe1Nc6j34AAAAC/hacker-hackerman.gif)
+![Hackerman](/images/hackerman.gif)
 
-A few months ago, I finally got my own internet connection !\
+A few months ago, I finally got my own internet connection!\
 *Context: My place doesn't have fiber access, so I had been "borrowing" the neighbour's Wi-Fi for a few years.*\
-Now I have a 5G router with __UNLIMITED__ data. Pretty cool !\
-Finally I can acces the internet, put all my personal life online, maybe SSH into my machines, and that's it...\
-Right ?
+Now I have a 5G router with __UNLIMITED__ data. Pretty cool!\
+Finally I can access the internet, put all my personal life online, maybe SSH into my machines, and that's it...\
+Right?
 
 ---
-### What's the point anyway ?
-![Blade Runner 2049](https://giffiles.alphacoders.com/207/207124.gif)
+### What's the point anyway?
+![Blade Runner 2049](/images/blade-runner.gif)
 
 Let's face it: we're not living in 1998 anymore. Tech used to be cool back then, but now it sucks.\
-We own basically nothing, and we have collectively traded our privacy for convinience. We are living in what people 30 years ago would have called a *distopia*.\
+We own basically nothing, and we have collectively traded our privacy for convenience. We are living in what people 30 years ago would have called a *dystopia*.\
 Sure, you could just give up and willingly hand over all your personal data to Big Tech, or simply reject modernity and return to monke...
 
-Luckily, a middle ground exists: **Becomming more "tech self-sufficient"**.
+Luckily, a middle ground exists: **Becoming more "tech self-sufficient"**.
 
-![Stardew Valley](https://images5.alphacoders.com/782/782779.png)
+![Stardew Valley](/images/stardew-valley.png)
 
 We all know that guy who used to live in a big city, and one day got so fed up that he sold everything to move to the countryside.\
 He’s not totally isolated; he still enjoys modern conveniences and drives to town whenever he needs to. But by living farther away, **he bought his freedom**.\
 Maintaining a home server is the tech equivalent of that: instead of planting carrots and raising chickens, you host the services you actually need at home.
 
-![Silicon Valley - Server Fire](https://c.tenor.com/b2ZhtePJIHQAAAAM/silicon-valley-fire.gif)
+![Silicon Valley - Server Fire](/images/silicon-valley-fire.gif)
 
 Of course, *with great tech freedom comes great configuration* overhead, so at first, it might feel like a downgrade, you are now responsible for your backups, your security, your updates…\
 And to be fair, some services can be notoriously tricky to self-host (emails for example), so you probably won't host *everything* under your roof.
@@ -39,31 +39,52 @@ Still, if you’re a tech nerd, this is a fun and rewarding DIY project that act
 
 ---
 ### Behold: The mainframe
-![Asus X751LJ](http://iweb.al/uploads/2020-11-01/c6cdaf9939d56489f5cc5d7c3a51eeb7.jpg)
+![Asus X751LJ](/images/asus-X751LJ.jpg)
 
-This is an Asus X751LJ I bought more than a decade ago, it was already underpowered at the time (Intel Core i3-4005U @1.6GHz, 4GB of *soldered, non upgradable* DDR3, Nvidia GT920M) so it's basically unusable as a modern computer, too big/heavy to bring around, and I had to remove the battery because it nearly caught fire once.
+This is an Asus X751LJ I bought more than a decade ago. It was already underpowered back then (Intel Core i3-4005U @ 1.6GHz, 4GB of *soldered, non upgradable* DDR3, Nvidia GT 920M) making it basically unusable as a modern computer, too bulky to bring around, and I had to rip out the battery because it almost caught fire once.
 
-A much better choice for a small, cheap, low power consuption server would be a Small Form Factor/Mini **Lenovo ThinkCentre** or **Dell Optiplex** + a 2-bay NAS for RAID 1 storage.\
-But surprisingly, even this setup can do the job for now.
+A much better choice for a small, cheap, "powerful" but low-power server would be a Small Form Factor (SFF) **Lenovo ThinkCentre** or **Dell OptiPlex** paired with a 2-bay NAS for RAID 1 storage.\
+But surprisingly, my Frankenstein setup gets the job done for now.
 
-I upgraded it's dying mechanical HDD for a 120GB SATA SSD I had lying around, installed Fedora Server and plugged a 1TB HDD via USB 3.\
-It's connected to a 5 Euro gigabit switch (TP-Link LS1005G) along my Mac Mini and my "gaming" computer, the switch is plugged into the router.\
-From that point, I never touched that computer again, everything is done via SSH.
+I upgraded its dying mechanical HDD for a 120GB SATA SSD I had lying around, installed Fedora Server and hooked up a 1TB HDD via USB 3.0.\
+It's wired to a 5 Euro gigabit switch (TP-Link LS1005G) alongside my Mac Mini and my "gaming" computer, and the switch straight into the 5G router.\
+From that point on, I never touched that computer again, everything is managed over SSH.
 
 ---
 ### What works, what doesn't
-First of all, the external HDD is SMB shared, remote access via Tailscale. Everything else is a Docker container\
-The main ones are:
-- **Adguard Home**: DHCP Server, DNS Blocklists
-- **Unbound**: DNS Resolver (Quad9 are leaving France, Mullvad stopped their public DNS, I still have Digitale-Gesellschaft's DNS as fallback)
-- **Vaultwarden**: Self-hosted Bitwarden, OTP and everything for free
-- **Navidrome**: Basically Spotify for all my personal music, with transcoding to save mobile data
-- **qBittorrent**: To seed *mostly* Linux ISOs
-- **Dozzle** (Logs), **Glance** (Dashboard), **Maddy** (SMTP), ...
+First off, the external drive is shared over SMB, with remote access handled via Tailscale. Everything else runs inside Docker containers.\
+Here are the main ones:
+- **Adguard Home**: Local DHCP Server and network-wide DNS ad-blocking (Disclaimer: Doesn't work for Youtube, you still need uBlock Origin for that)
+- **Unbound**: Recursive DNS resolver (Quad9 is leaving France, Mullvad shut down their public DNS; I still keep Digitale-Gesellschaft as an upstream fallback)
+- **Vaultwarden**: Self-hosted Bitwarden (TOTP and premium features unlocked for free)
+- **Navidrome**: Music streaming using my personal library, with on-the-fly transcoding to spare my mobile data plan
+- **qBittorrent**: To seed "Linux ISOs"
+- **Dozzle** (Container logs), **Glance** (Dashboard), **Maddy** (SMTP, just in case a container needs to send out a critical email, like password recovery), ...
 
-I do have *way more* things running as experiments mostly, but nothing worth mentionning.\
-Even though it makes sense because everything is headless/terminal only, I was plesently surprised to see all the services I can comfortably run on such low specs, and I still have a lot of room for more actually !
+I have a bunch of other containers running mostly as experiments, but nothing critical enough to mention here.\
+Even though it makes sense given that everything runs headless without a GUI, I was pleasantly surprised by how many services I can comfortably host on such humble specs (20 containers right now, and I still have plenty of headroom left).
 
-Maddy is only here just in case one of my services need to end an important email (password recovery mostly).
+Best of all: zero port forwarding on my router. Tailscale takes care of secure remote mesh access without exposing attack surfaces to the public web (and down the road, it can even be replaced with a self-hosted Headscale instance).
 
-No ports needed to be opened of my router, and again, Tailscale takes care of private remote access (It's even possible to replace Tailscale by self hosting Headscale).
+---
+### The compromises (and why it's not production-ready)
+
+Let’s not kid ourselves: this is a fun, practical toy, not a high-availability tier-3 datacenter. 
+
+There are obvious bottlenecks:
+1. **Zero redundancy:** A single external USB HDD means that if the drive dies, everything not backed up vanishes. USB cables can also get nudged loose.
+2. **Power instability:** Since the battery had to be removed, a 0.5-second power flicker cuts the whole server instantly. No UPS (yet).
+3. **Bandwidth asymmetry:** 5G is shockingly fast on downloads, but the upload speed and latency can vary wildly depending on weather and cell tower congestion.
+
+Is it reliable enough for everyday personal use? Surprisingly, yes.\
+Would I host critical client infrastructure on it? Absolutely not.
+
+And of course, money is *once again* is the biggest limit. I would **LOVE** to host LLMs and other types of AI, or build a Docker Swarm cluster just for the love of the game, but it is simply not feasible... At least for now...
+
+---
+### What's next?
+
+This project started as an afternoon experiment to revive e-waste, but homelabbing is a slippery slope.\
+I still have a lot of services to try, a lot of cheap hardware to find on [Leboncoin](https://leboncoin.fr), and of course a lot of stuff to break.
+
+If you have an old laptop collecting dust in a closet, don't throw it away. Wipe the drive, install a headless Linux distro, throw Docker on it, and reclaim a small piece of your digital sovereignty.
