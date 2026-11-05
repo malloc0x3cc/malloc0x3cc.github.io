@@ -22,8 +22,10 @@ Just kidding, let's spend an entire weekend breaking configurations on a homeser
 
 Let's face it: we're not living in 1998 anymore. Tech used to be cool back then, but now it's pretty bad.\
 We own basically nothing, and we have collectively traded our privacy for convenience. We are living in what people 30 years ago would have called a *dystopia*.\
-And don't get me started on the death of software optimization. Developers now act like you’re the problem, expecting you to buy workstation-grade hardware just to run their unoptimized garbage.\
+And don't get me started on the death of software optimization. Developers now act like you’re the problem, expecting you to buy workstation-grade hardware just to run their unoptimized garbage.
+
 Sure, you could just give up and willingly hand over all your personal data to Big Tech, or simply reject modernity and return to monke...
+![return to monke](/homelabing-101/monke.gif)
 
 Luckily, a middle ground exists.
 
