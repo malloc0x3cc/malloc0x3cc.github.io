@@ -68,7 +68,7 @@ From that point on, I never touched that computer again, everything is managed o
 First off, the external drive is shared over SMB, with remote access handled via Tailscale. Everything else runs inside Docker containers.\
 Here are the main ones:
 - **Adguard Home**: Local DHCP Server and network-wide DNS ad-blocking (Disclaimer: Doesn't work for Youtube, you still need uBlock Origin for that)
-- **Unbound**: Recursive DNS resolver (Quad9 is leaving France, Mullvad shut down their public DNS; I still keep Digitale-Gesellschaft as an upstream fallback)
+- **Unbound**: Recursive DNS resolver (Mullvad partnered with Quad9, and Quad9 is pulling out of France due to censorship court orders; I keep Digitale Gesellschaft as an upstream fallback) 
 - **Vaultwarden**: Self-hosted Bitwarden (TOTP and premium features unlocked for free)
 - **Navidrome**: Music streaming using my personal library, with on-the-fly transcoding to spare my mobile data plan
 - **qBittorrent**: To seed "Linux ISOs"
