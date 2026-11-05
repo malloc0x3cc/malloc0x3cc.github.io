@@ -6,7 +6,7 @@ tags: ["server", "sysadmin"]
 categories: ["personal-projects"]
 ---
 ### *The trees... The trees are speaking fed...*
-![Hackerman](/homelabing-101/hackerman.gif)
+![hackerman](/homelabing-101/hackerman.gif)
 
 A few months ago, I finally got my own internet connection!\
 *Context: My place doesn't have fiber access, so I had been "borrowing" the neighbour's Wi-Fi for a few years.*\
@@ -59,7 +59,9 @@ It's wired to a 5 Euro gigabit switch (TP-Link LS1005G) alongside my Mac Mini an
 From that point on, I never touched that computer again, everything is managed over SSH.
 
 ---
-### What works, what doesn't
+### What works (A.K.A. What's not currently broken)
+![Let's all love Lain](/homelabing-101/lain.gif)
+
 First off, the external drive is shared over SMB, with remote access handled via Tailscale. Everything else runs inside Docker containers.\
 Here are the main ones:
 - **Adguard Home**: Local DHCP Server and network-wide DNS ad-blocking (Disclaimer: Doesn't work for Youtube, you still need uBlock Origin for that)
@@ -70,12 +72,51 @@ Here are the main ones:
 - **Dozzle** (Container logs), **Glance** (Dashboard), **Maddy** (SMTP, just in case a container needs to send out a critical email, like password recovery), ...
 
 I have a bunch of other containers running mostly as experiments, but nothing critical enough to mention here.\
-Even though it makes sense given that everything runs headless without a GUI, I was pleasantly surprised by how many services I can comfortably host on such humble specs (20 containers right now, and I still have plenty of headroom left).
+Even though it makes sense given that everything runs headless without a GUI, I was pleasantly surprised by how many services I can comfortably host on such humble specs (20 containers right now, and I still have plenty of headroom left).\
+Zero port forwarding on my router. Tailscale takes care of secure remote mesh access without exposing attack surfaces to the public web (and down the road, it can even be replaced with a self-hosted Headscale instance).
 
-Best of all: zero port forwarding on my router. Tailscale takes care of secure remote mesh access without exposing attack surfaces to the public web (and down the road, it can even be replaced with a self-hosted Headscale instance).
+The best part of repurposing an old mobile dual-core chip? It barely pulls anything from the wall at idle. It's dead silent, draws less power than an LED lightbulb, and stays cooler without a battery cooking itself inside the chassis.
+
+![90s kid on a computer](/homelabing-101/90s-computer-kid.png)
+
+While this isn't a tutorial, pro tip for laptop homelabbers: don't forget to set HandleLidSwitch rules to `ignore` in `logind.conf`, unless you enjoy wondering why your entire infrastructure went dark the moment you shut the lid.
+```bash
+# /etc/systemd/logind.conf.d/lid.conf
+[Login]
+HandleLidSwitch=ignore
+HandleLidSwitchExternalPower=ignore
+HandleLidSwitchDocked=ignore
+```
+
+At some point, you will realize that maintaining a single, monolithic `compose.yml` gets messy fast. That's why having a master compose file using Docker's native `include` syntax alongside modular subfolders is a game changer:
+
+```yaml
+# ~/docker/compose.yml
+name: server
+include:
+  - core/compose.yml
+  - network/compose.yml
+  - media/compose.yml
+```
+Coupled with a clean directory layout:
+```text
+~/docker
+├── compose.yml
+├── core/
+│   ├── compose.yml
+│   └── ...
+├── media/
+│   ├── compose.yml
+│   └── ...
+└── network/
+    ├── compose.yml
+    └── ...
+```
+This keeps each stack isolated and easy to maintain while still letting you control the entire fleet with a simple `docker compose up -d` from the root directory.
 
 ---
 ### The compromises (and why it's not production-ready)
+![Anime girl on a computer](/homelabing-101/anime-computer.gif)
 
 Let’s not kid ourselves: this is a fun, practical toy, not a high-availability tier-3 datacenter. 
 
@@ -84,6 +125,8 @@ There are obvious bottlenecks:
 2. **Power instability:** Since the battery had to be removed, a 0.5-second power flicker cuts the whole server instantly. No UPS (yet).
 3. **Bandwidth asymmetry:** 5G is shockingly fast on downloads, but the upload speed and latency can vary wildly depending on weather and cell tower congestion.
 
+Note: Cellular 5G connections live behind strict carrier-grade NAT (CGNAT), meaning inbound port-forwarding is dead on arrival anyway. Tailscale's WireGuard hole-punching isn't just a privacy layer here, it's the only reason this setup is reachable from outside.
+
 Is it reliable enough for everyday personal use? Surprisingly, yes.\
 Would I host critical client infrastructure on it? Absolutely not.
 
@@ -91,8 +134,12 @@ And of course, money is, *once again*, the biggest limit. I would **LOVE** to ho
 
 ---
 ### What's next?
+![Yasuo Iwakura](/homelabing-101/yasuo.gif)
 
 This project started as an afternoon experiment to revive e-waste, but homelabbing is a slippery slope.\
 I still have a lot of services to try, a lot of cheap hardware to find on [Leboncoin](https://leboncoin.fr), and of course a lot of stuff to break.
 
 If you have an old laptop collecting dust in a closet, don't throw it away. Wipe the drive, install a headless Linux distro, throw Docker on it, and reclaim a small piece of your digital sovereignty.
+
+Who knows? Maybe this little experiment could evolve into a cool F2F network one day. Though the real challenge with F2F isn't the tech: it's finding friends autistic enough to actually care about that stuff.\
+Good luck with that.
