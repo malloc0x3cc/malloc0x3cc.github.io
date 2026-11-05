@@ -50,9 +50,11 @@ Still, if you’re a tech nerd, this is a fun and rewarding DIY project that act
 ![Asus X751LJ](/homelabing-101/asus-X751LJ.jpg)
 
 This is an Asus X751LJ I bought more than a decade ago. It was already underpowered back then (Intel Core i3-4005U @ 1.6GHz, 4GB of *soldered, non-upgradable* DDR3, Nvidia GT 920M) making it basically unusable as a modern computer, too bulky to bring around, ...\
-Oh, and I had to rip out the battery because it almost caught fire once.\
 This laptop is falling apart so badly that I was seriously considering handing it over to an Apple Store for recycling.\
-In fact, it has died more times than I can count, yet it's still running today. Not because it's indestructible, but because I stubbornly refuse to let it die.
+In fact, it has died more times than I can count, yet it's still running today. Not because it's indestructible, but because I stubbornly refuse to let it die.\
+Oh, and I had to rip out the battery because it almost caught fire once.
+![spicy pillow](/homelabing-101/spicy-pillow.jpg)
+
 
 A much better choice for a small, cheap, "powerful" but low-power server would be a Small Form Factor (SFF) **Lenovo ThinkCentre** or **Dell OptiPlex** paired with a 2-bay NAS for RAID 1 storage.\
 But surprisingly, my Frankenstein setup gets the job done for now.
