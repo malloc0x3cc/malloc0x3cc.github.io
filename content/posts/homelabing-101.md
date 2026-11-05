@@ -18,7 +18,7 @@ Just kidding, let's spend an entire weekend breaking configurations on a homeser
 
 ---
 ### What's the point anyway?
-<img src="/homelabing-101/blade-runner.gif" alt="Blade Runner 2049" style="width: 75%;" />
+<img src="/homelabing-101/blade-runner.gif" alt="Blade Runner 2049" style="width: 100%;" />
 
 Let's face it: we're not living in 1998 anymore. Tech used to be cool back then, but now it's pretty bad.\
 We own basically nothing, and we have collectively traded our privacy for convenience. We are living in what people 30 years ago would have called a *dystopia*.\
@@ -31,7 +31,7 @@ Luckily, a middle ground exists.
 
 ---
 ### Becoming more "tech self-sufficient".
-<img src="/homelabing-101/stardew-valley.png" alt="Stardew Valley" style="width: 75%;" />
+<img src="/homelabing-101/stardew-valley.jpg" alt="Stardew Valley" style="width: 75%;" />
 
 We all know that guy who used to live in a big city, and one day got so fed up that he sold everything to move to the countryside.\
 He’s not totally isolated; he still enjoys modern conveniences and drives to town whenever he needs to. But by living farther away, **he bought his freedom**.
@@ -84,7 +84,7 @@ Zero port forwarding on my router. Tailscale takes care of secure remote mesh ac
 
 The best part of repurposing an old mobile dual-core chip? It barely pulls anything from the wall at idle. It's dead silent, draws less power than an LED lightbulb, and stays cooler without a battery cooking itself inside the chassis.
 
-<img src="/homelabing-101/90s-computer-kid.png" alt="90s kid on a computer" style="width: 75%;" />
+<img src="/homelabing-101/90s-computer-kid.jpg" alt="90s kid on a computer" style="width: 75%;" />
 
 While this isn't a tutorial, pro tip for laptop homelabbers: don't forget to set HandleLidSwitch rules to `ignore` in `logind.conf`, unless you enjoy wondering why your entire infrastructure went dark the moment you shut the lid.
 ```bash
