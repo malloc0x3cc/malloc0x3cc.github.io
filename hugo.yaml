@@ -18,7 +18,7 @@ params:
   env: production
   title: "Malloc0x3cc"
   description: "Low-level programming (C, ASM), computer science & studies"
-  author: "Malloc0x3cc"
+  author: "Mallone DELWAULLE"
   ShowReadingTime: true
   ShowShareButtons: false
   ShowPostNavLinks: true
