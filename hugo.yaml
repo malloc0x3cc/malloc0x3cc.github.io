@@ -12,6 +12,9 @@ markup:
     style: "nordic"
 
 params:
+  homeInfoParams:
+    Title: "Malloc0x3cc"
+    Content: "Low-level programming (C, ASM), computer science & studies"
   env: production
   title: "Malloc0x3cc"
   description: "Low-level programming (C, ASM), computer science & studies"
@@ -20,12 +23,18 @@ params:
   ShowShareButtons: false
   ShowPostNavLinks: true
   ShowCodeCopyButtons: true
+  ShowToc: true
+  TocOpen: false
 
   # Home page
   profileMode:
     enabled: true
     subtitle: "Low-level programming (C, ASM), computer science & studies"
-    # buttons:
+    buttons:
+      - name: "Posts"
+        url: "/posts/"
+      - name: "Tags"
+        url: "/tags/"
     #   - name: "Projects"
     #     url: "/categories/personal-projects/"
     #   - name: "Academics"
@@ -41,18 +50,21 @@ params:
  
 menu:
   main:
-    - name: "All posts"
+    - name: "Posts"
       url: "/posts/"
+      weight: 10
+    - name: "Tags"
+      url: "/tags/"
       weight: 10
     # - name: "Projects"
     #   url: "/categories/personal-projects/"
-    #   weight: 20
+    #   weight: 10
     # - name: "Academics"
     #   url: "/categories/academics/"
-    #   weight: 30
+    #   weight: 10
     # - name: "Misc"
     #   url: "/categories/misc/"
-    #   weight: 40
+    #   weight: 10
     - name: "About"
       url: "/about/"
-      weight: 50
+      weight: 20

@@ -1,12 +1,12 @@
 ---
 title: "Homelabing 101"
-date: 2026-10-31
-draft: true
+date: 2026-11-05
+draft: false
 tags: ["server", "sysadmin"]
 categories: ["personal-projects"]
 ---
 ### *The trees... The trees are speaking fed...*
-![Hackerman](/images/hackerman.gif)
+![Hackerman](/homelabing-101/hackerman.gif)
 
 A few months ago, I finally got my own internet connection!\
 *Context: My place doesn't have fiber access, so I had been "borrowing" the neighbour's Wi-Fi for a few years.*\
@@ -14,23 +14,28 @@ Now I have a 5G router with __UNLIMITED__ data. Pretty cool!\
 Finally I can access the internet, put all my personal life online, maybe SSH into my machines, and that's it...\
 Right?
 
+Just kidding, let's spend an entire weekend breaking configurations on a homeserver until 4 AM.
+
 ---
 ### What's the point anyway?
-![Blade Runner 2049](/images/blade-runner.gif)
+![Blade Runner 2049](/homelabing-101/blade-runner.gif)
 
-Let's face it: we're not living in 1998 anymore. Tech used to be cool back then, but now it sucks.\
+Let's face it: we're not living in 1998 anymore. Tech used to be cool back then, but now it's pretty bad.\
 We own basically nothing, and we have collectively traded our privacy for convenience. We are living in what people 30 years ago would have called a *dystopia*.\
+And don't get me started on the death of software optimization. Developers now act like you’re the problem, expecting you to buy workstation-grade hardware just to run their unoptimized garbage.\
 Sure, you could just give up and willingly hand over all your personal data to Big Tech, or simply reject modernity and return to monke...
 
-Luckily, a middle ground exists: **Becoming more "tech self-sufficient"**.
+Luckily, a middle ground exists.
 
-![Stardew Valley](/images/stardew-valley.png)
+---
+### Becoming more "tech self-sufficient".
+![Stardew Valley](/homelabing-101/stardew-valley.png)
 
 We all know that guy who used to live in a big city, and one day got so fed up that he sold everything to move to the countryside.\
 He’s not totally isolated; he still enjoys modern conveniences and drives to town whenever he needs to. But by living farther away, **he bought his freedom**.\
 Maintaining a home server is the tech equivalent of that: instead of planting carrots and raising chickens, you host the services you actually need at home.
 
-![Silicon Valley - Server Fire](/images/silicon-valley-fire.gif)
+![Silicon Valley - Server Fire](/homelabing-101/silicon-valley-fire.gif)
 
 Of course, *with great tech freedom comes great configuration* overhead, so at first, it might feel like a downgrade, you are now responsible for your backups, your security, your updates…\
 And to be fair, some services can be notoriously tricky to self-host (emails for example), so you probably won't host *everything* under your roof.
@@ -39,9 +44,12 @@ Still, if you’re a tech nerd, this is a fun and rewarding DIY project that act
 
 ---
 ### Behold: The mainframe
-![Asus X751LJ](/images/asus-X751LJ.jpg)
+![Asus X751LJ](/homelabing-101/asus-X751LJ.jpg)
 
-This is an Asus X751LJ I bought more than a decade ago. It was already underpowered back then (Intel Core i3-4005U @ 1.6GHz, 4GB of *soldered, non upgradable* DDR3, Nvidia GT 920M) making it basically unusable as a modern computer, too bulky to bring around, and I had to rip out the battery because it almost caught fire once.
+This is an Asus X751LJ I bought more than a decade ago. It was already underpowered back then (Intel Core i3-4005U @ 1.6GHz, 4GB of *soldered, non-upgradable* DDR3, Nvidia GT 920M) making it basically unusable as a modern computer, too bulky to bring around, ...\
+This laptop is falling apart so badly that I was seriously considering handing it over to an Apple Store for recycling.\
+Oh, and I had to rip out the battery because it almost caught fire once.\
+In fact, it has died more times than I can count, yet it's still running today. Not because it's indestructible, but because I stubbornly refuse to let it die.
 
 A much better choice for a small, cheap, "powerful" but low-power server would be a Small Form Factor (SFF) **Lenovo ThinkCentre** or **Dell OptiPlex** paired with a 2-bay NAS for RAID 1 storage.\
 But surprisingly, my Frankenstein setup gets the job done for now.
@@ -79,7 +87,7 @@ There are obvious bottlenecks:
 Is it reliable enough for everyday personal use? Surprisingly, yes.\
 Would I host critical client infrastructure on it? Absolutely not.
 
-And of course, money is *once again* is the biggest limit. I would **LOVE** to host LLMs and other types of AI, or build a Docker Swarm cluster just for the love of the game, but it is simply not feasible... At least for now...
+And of course, money is, *once again*, the biggest limit. I would **LOVE** to host LLMs and other types of AI, or build a Docker Swarm cluster just for the love of the game, but it is simply not feasible... At least for now...
 
 ---
 ### What's next?
