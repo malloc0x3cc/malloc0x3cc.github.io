@@ -32,7 +32,8 @@ Luckily, a middle ground exists.
 ![Stardew Valley](/homelabing-101/stardew-valley.png)
 
 We all know that guy who used to live in a big city, and one day got so fed up that he sold everything to move to the countryside.\
-He’s not totally isolated; he still enjoys modern conveniences and drives to town whenever he needs to. But by living farther away, **he bought his freedom**.\
+He’s not totally isolated; he still enjoys modern conveniences and drives to town whenever he needs to. But by living farther away, **he bought his freedom**.
+
 Maintaining a home server is the tech equivalent of that: instead of planting carrots and raising chickens, you host the services you actually need at home.
 
 ![Silicon Valley - Server Fire](/homelabing-101/silicon-valley-fire.gif)
@@ -47,8 +48,8 @@ Still, if you’re a tech nerd, this is a fun and rewarding DIY project that act
 ![Asus X751LJ](/homelabing-101/asus-X751LJ.jpg)
 
 This is an Asus X751LJ I bought more than a decade ago. It was already underpowered back then (Intel Core i3-4005U @ 1.6GHz, 4GB of *soldered, non-upgradable* DDR3, Nvidia GT 920M) making it basically unusable as a modern computer, too bulky to bring around, ...\
-This laptop is falling apart so badly that I was seriously considering handing it over to an Apple Store for recycling.\
 Oh, and I had to rip out the battery because it almost caught fire once.\
+This laptop is falling apart so badly that I was seriously considering handing it over to an Apple Store for recycling.\
 In fact, it has died more times than I can count, yet it's still running today. Not because it's indestructible, but because I stubbornly refuse to let it die.
 
 A much better choice for a small, cheap, "powerful" but low-power server would be a Small Form Factor (SFF) **Lenovo ThinkCentre** or **Dell OptiPlex** paired with a 2-bay NAS for RAID 1 storage.\
