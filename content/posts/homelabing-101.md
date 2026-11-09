@@ -5,7 +5,7 @@ draft: false
 tags: ["server", "sysadmin"]
 categories: ["personal-projects"]
 ---
-### *The trees... The trees are speaking fed...*
+## *The trees... The trees are speaking fed...*
 <img src="/homelabing-101/hackerman.gif" alt="Hackerman" style="width: 75%;" />
 
 A few months ago, I finally got my own internet connection!\
@@ -17,7 +17,7 @@ Right?
 Just kidding, let's spend an entire weekend breaking configurations on a homeserver until 4 AM.
 
 ---
-### What's the point anyway?
+## What's the point anyway?
 <img src="/homelabing-101/blade-runner.gif" alt="Blade Runner 2049" style="width: 100%;" />
 
 Let's face it: we're not living in 1998 anymore. Tech used to be cool back then, but now it's pretty bad.\
@@ -30,7 +30,7 @@ Sure, you could just give up and willingly hand over all your personal data to B
 Luckily, a middle ground exists.
 
 ---
-### Becoming more "tech self-sufficient".
+## Becoming more "tech self-sufficient".
 <img src="/homelabing-101/stardew-valley.jpg" alt="Stardew Valley" style="width: 75%;" />
 
 We all know that guy who used to live in a big city, and one day got so fed up that he sold everything to move to the countryside.\
@@ -46,7 +46,7 @@ And to be fair, some services can be notoriously tricky to self-host (emails for
 Still, if you’re a tech nerd, this is a fun and rewarding DIY project that actually means something—and it might even save you a decent chunk of money.
 
 ---
-### Behold: The mainframe
+## Behold: The mainframe
 <img src="/homelabing-101/asus-X751LJ.jpg" alt="Asus X751LJ a.k.a. 'The Mainframe'" style="width: 75%;" />
 
 This is an Asus X751LJ I bought more than a decade ago. It was already underpowered back then (Intel Core i3-4005U @ 1.6GHz, 4GB of *soldered, non-upgradable* DDR3, Nvidia GT 920M) making it basically unusable as a modern computer, too bulky to bring around, ...\
@@ -65,7 +65,7 @@ It's wired to a 5 Euro gigabit switch (TP-Link LS1005G) alongside my Mac Mini an
 From that point on, I never touched that computer again, everything is managed over SSH.
 
 ---
-### What works (A.K.A. What's not currently broken)
+## What works (A.K.A. What's not currently broken)
 <img src="/homelabing-101/lain.gif" alt="Let's all love Lain" style="width: 75%;" />
 
 First off, the external drive is shared over SMB, with remote access handled via Tailscale. Everything else runs inside Docker containers.\
@@ -111,7 +111,7 @@ include:
 This keeps each stack isolated and easy to maintain while still letting you control everything with `docker compose up -d` from the root directory.
 
 ---
-### The compromises (and why it's not production-ready)
+## The compromises
 <img src="/homelabing-101/anime-computer.gif" alt="Anime girl on a computer" style="width: 75%;" />
 
 While this is a fun, practical toy, it's not a datacenter. 
@@ -130,7 +130,7 @@ Get a VPS for that.
 And of course, money is, *once again*, the biggest limit. I would **LOVE** to host LLMs and other types of AI, or build a Docker Swarm cluster just for the love of the game, but it is simply not realistic for now...
 
 ---
-### What's next?
+## What's next?
 <img src="/homelabing-101/yasuo.gif" alt="Yasuo IWAKURA" style="width: 75%;" />
 
 This project started as an afternoon experiment to revive e-waste, but homelabbing is addictive.\
